@@ -5,14 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showModalStatus: false 
+    showModalStatus: false,
+    listData: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.getList()
   },
 
   /**
@@ -134,7 +135,17 @@ Page({
         }
       );
     }
-  }  
+  },
+  // 获取列表
+  getList () {
+    this.setData({
+      listData: [
+        { name: '刘继宽', address: "熊记", withNum: 1},
+        { name: '薛怀天', address: "南疆", withNum: 6 },
+        { name: '马鸿鹏', address: "厕所", withNum: 8}
+      ]
+    })
+  }
 
 
 })

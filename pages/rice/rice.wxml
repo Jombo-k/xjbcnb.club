@@ -71,7 +71,11 @@
     <text class="flex-cell flex-row">携带人数</text>
     <text class="flex-cell flex-row">操作</text>
   </view>
-  <view class="flex-row flex-cell">
+  <view 
+    class="flex-row flex-cell"
+    wx:for="{{listData}}"
+    wx:for-item=""
+  >
     <text class="flex-cell flex-row">阿三</text>
     <text class="flex-cell flex-row">熊记</text>
     <text class="flex-cell flex-row">1</text>
