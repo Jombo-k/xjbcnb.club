@@ -74,11 +74,13 @@
   <view 
     class="flex-row flex-cell"
     wx:for="{{listData}}"
-    wx:for-item=""
+    wx:for-item="item"
+    wx:for-index="idx"
+    wx:key="idx"
   >
-    <text class="flex-cell flex-row">阿三</text>
-    <text class="flex-cell flex-row">熊记</text>
-    <text class="flex-cell flex-row">1</text>
+    <text class="flex-cell flex-row">{{item.username}}</text>
+    <text class="flex-cell flex-row">{{item.address}}</text>
+    <text class="flex-cell flex-row">{{item.withnum}}</text>
     <text 
       class="flex-cell flex-row red"
       bindtap="showDeleteModal"

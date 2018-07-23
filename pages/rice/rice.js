@@ -138,12 +138,28 @@ Page({
   },
   // 获取列表
   getList () {
-    this.setData({
-      listData: [
-        { name: '刘继宽', address: "熊记", withNum: 1},
-        { name: '薛怀天', address: "南疆", withNum: 6 },
-        { name: '马鸿鹏', address: "厕所", withNum: 8}
-      ]
+    // this.setData({
+    //   listData: [
+    //     { name: '刘继宽', address: "熊记", withNum: 1},
+    //     { name: '薛怀天', address: "南疆", withNum: 6 },
+    //     { name: '马鸿鹏', address: "厕所", withNum: 8}
+    //   ]
+    // })
+    wx.request({
+      url: 'http://118.25.16.199:8688/get_vistor/', 
+      method: 'GET',
+      data: {
+        listData: []
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: (res) => {
+        console.log(res.data)
+        this.setData({
+          listData: res.data
+        })
+      }
     })
   }
 
