@@ -1,0 +1,5 @@
+<!--pages/metal/metal.wxml-->
+<view class="metal-container">
+  <image class="image" src="../../images/logo.jpg"></image>
+  <!-- <image class="thouse" src="../../images/thouse.jpeg"></image> -->
+</view>

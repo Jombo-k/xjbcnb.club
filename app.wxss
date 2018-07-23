@@ -1,0 +1,8 @@
+/**app.wxss**/
+page {
+  width: 100%;
+  height: 100%;
+  color: #8a8a8a;
+  background: #201e1f;
+  font-family: "Weibei SC";
+}
