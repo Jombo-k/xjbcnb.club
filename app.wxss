@@ -3,6 +3,9 @@ page {
   width: 100%;
   height: 100%;
   color: #8a8a8a;
-  background: #201e1f;
+  /* background: #201e1f; */
   font-family: "Weibei SC";
+  background-image: url('http://118.25.16.199/wp-content/uploads/2018/07/1.jpg');
+  background-size: 100% 100%;
+  background-attachment: fixed;
 }

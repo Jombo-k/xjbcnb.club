@@ -62,8 +62,7 @@
     class="flex-row flex-cell"
     wx:for="{{listData}}"
     wx:for-item="item"
-    wx:for-index="idx"
-    wx:key="idx"
+    wx:key="this"
   >
     <text class="flex-cell flex-row">{{item.username}}</text>
     <text class="flex-cell flex-row">{{item.address}}</text>
