@@ -1,5 +1,5 @@
 <!--pages/rice/rice.wxml-->
-<view class="list">夜间尬酒列表</view>
+<!-- <view class="list">夜间尬酒列表</view> -->
 <!-- 点击按钮显示添加表单 -->
 <view class="add-box">
   <button
@@ -33,20 +33,16 @@
   <view class="drawer_content">  
     <view class="top grid">  
       <label class="title col-0">姓名</label>  
-      <input class="input_base input_h30 col-1" name="rName" value="刘继宽"></input>  
+      <input bindinput="setName" class="input_base input_h30 col-1" name="name" ></input>  
     </view>  
     <view class="top grid">  
       <label class="title col-0">地点</label>  
-      <input class="input_base input_h30 col-1" name="mobile" value="不要南疆"></input>  
+      <input bindinput="setAddress" class="input_base input_h30 col-1" name="address"></input>  
     </view>
     <view class="top grid">  
       <label class="title col-0">携带人数</label>  
-      <input class="input_base input_h30 col-1" name="Email" value="0"></input>  
-    </view>  
-    <view class="top bottom grid">  
-      <label class="title col-0">备注</label>  
-      <input class="input_base input_h30 col-1" name="bz"></input>  
-    </view>  
+      <input bindinput="setWithNum" class="input_base input_h30 col-1" name="withNum"></input>  
+    </view>
   </view>  
   <view 
     class="btn_ok"
@@ -54,15 +50,6 @@
     data-statu="close"
   >确定</view>  
 </view>
-<!-- <button 
-  class="add-btn"
-  type="default"
-  size="default"
-  loading="{{loading}}"
-  plain="{{plain}}"
-  disabled="{{disabled}}"
-  hover-class="other-button-hover"
-> 添加 </button> -->
 <!-- 列表 -->
 <view id="panel">
   <view class="flex-cell flex-row">
@@ -84,6 +71,7 @@
     <text 
       class="flex-cell flex-row red"
       bindtap="showDeleteModal"
+      data-id="{{item.id}}"
     >删除</text>
   </view>
 </view>
