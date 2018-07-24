@@ -5,8 +5,8 @@
 }
 
 #panel text{
-  height: 13vh;
-  line-height: 13vh;
+  height: 9vh;
+  line-height: 9vh;
   border: 1rpx solid #ddd;
   overflow: hidden;
   text-overflow: ellipsis;
