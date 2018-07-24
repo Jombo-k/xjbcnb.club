@@ -6,18 +6,19 @@
 }
 
 #panel text{
+  height: 13vh;
   line-height: 13vh;
-  /* border-right: 1rpx solid #ddd;
-  border-top: 1rpx solid #ddd; */
   border: 1rpx solid #ddd;
-  /* border-bottom: none; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 
 .flex-row{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+
 }
 .flex-cell{
   flex: 1;
@@ -86,7 +87,7 @@
 }  
 .drawer_content {  
   height: 210px;  
-  overflow-y: scroll; /*超出父盒子高度可滚动*/  
+  overflow-y: scroll;
 }  
   
 .btn_ok{  
