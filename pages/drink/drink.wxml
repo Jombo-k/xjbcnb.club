@@ -71,6 +71,7 @@
       class="flex-cell flex-row red"
       bindtap="showDeleteModal"
       data-id="{{item.id}}"
-    >删除</text>
+    >鸽了</text>
   </view>
 </view>
+

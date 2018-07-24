@@ -1,6 +1,5 @@
 {
   "pages":[
-    "pages/rice/rice",
     "pages/drink/drink",
     "pages/metal/metal"
   ],
@@ -25,12 +24,6 @@
       "text": "drink",
       "iconPath": "images/drink.png",
       "selectedIconPath": "images/drink_active.png"
-    },
-    {
-      "pagePath": "pages/rice/rice",
-      "text": "rice",
-      "iconPath": "images/rice.png",
-      "selectedIconPath": "images/rice_active.png"
     }]
   }
 }
