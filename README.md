@@ -1,3 +1,3 @@
 # xjbcnb.club
 
-#### 微信小程序
+#### welcome to xjbcnb.club

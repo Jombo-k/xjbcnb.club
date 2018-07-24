@@ -1,16 +1,77 @@
 <!--pages/drink/drink.wxml-->
-<view class="drink-container">
-  <image class="image" src="../../images/logo.jpg"></image>
-  <view class="list">夜间尬酒名单</view>
-  <view class="name2">小熊 铁柱</view>
-  <view class="name3">老冯 阿雅</view>
-  <view class="name4">小肚 王哥</view>
-  <view class="name5">刺猬 学姐</view>
-  <view class="name6">彦生 倪尕</view>
-  <view class="name7">教练 翠花</view>
-  <view class="name8">阿三 小鹿</view>
-  <view class="name9">凉了 李恒</view>
-  <view class="name10">宽</view>
-  <view class="name11">可可 领着两个别人家的女朋友</view>
-  <!-- <view class="title">喝就完事儿了奥！！</view> -->
+<view class="list">夜间尬酒列表</view>
+<!-- 点击按钮显示添加表单 -->
+<view class="add-box">
+  <button
+    class="add-btn"
+    bindtap="powerDrawer"
+    data-statu="open"
+    type="default"
+    size="default"
+    loading="{{loading}}"
+    plain="{{plain}}"
+    disabled="{{disabled}}"
+    hover-class="other-button-hover"
+  >添加</button>  
+</view>
+<!--mask-->  
+<view 
+  class="drawer_screen"
+  bindtap="powerDrawer"
+  data-statu="close"
+  wx:if="{{showModalStatus}}"
+></view>  
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view
+  animation="{{animationData}}"
+  class="drawer_box"
+  wx:if="{{showModalStatus}}"
+>  
+  <!--drawer content-->  
+  <view class="drawer_title">添加</view>  
+  <view class="drawer_content">  
+    <view class="top grid">  
+      <label class="title col-0">姓名</label>  
+      <input bindinput="setName" class="input_base input_h30 col-1" name="name" ></input>  
+    </view>  
+    <view class="top grid">  
+      <label class="title col-0">地点</label>  
+      <input bindinput="setAddress" class="input_base input_h30 col-1" name="address"></input>  
+    </view>
+    <view class="top grid">  
+      <label class="title col-0">携带人数</label>  
+      <input bindinput="setWithNum" class="input_base input_h30 col-1" name="withNum"></input>  
+    </view>
+  </view>  
+  <view 
+    class="btn_ok"
+    bindtap="powerDrawer"
+    data-statu="close"
+  >确定</view>  
+</view>
+<!-- 列表 -->
+<view id="panel">
+  <view class="flex-cell flex-row">
+    <text class="flex-cell flex-row">姓名</text>
+    <text class="flex-cell flex-row">地点</text>
+    <text class="flex-cell flex-row">携带人数</text>
+    <text class="flex-cell flex-row">操作</text>
+  </view>
+  <view 
+    class="flex-row flex-cell"
+    wx:for="{{listData}}"
+    wx:for-item="item"
+    wx:for-index="idx"
+    wx:key="idx"
+  >
+    <text class="flex-cell flex-row">{{item.username}}</text>
+    <text class="flex-cell flex-row">{{item.address}}</text>
+    <text class="flex-cell flex-row">{{item.withnum}}</text>
+    <text 
+      class="flex-cell flex-row red"
+      bindtap="showDeleteModal"
+      data-id="{{item.id}}"
+    >删除</text>
+  </view>
 </view>
