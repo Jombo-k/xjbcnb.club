@@ -134,7 +134,6 @@ Page({
         listData: []
       },
       success: (res) => {
-        console.log(res.data)
         this.setData({
           listData: res.data
         })
