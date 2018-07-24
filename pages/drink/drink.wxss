@@ -22,7 +22,9 @@
 .flex-cell{
   flex: 1;
 }
-
+.blackBg {
+  color: #fff;
+}
 .add-btn {
   margin: 30rpx;
   width: 250rpx;

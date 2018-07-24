@@ -52,7 +52,7 @@
 </view>
 <!-- 列表 -->
 <view id="panel">
-  <view class="flex-cell flex-row">
+  <view class="flex-cell flex-row blackBg">
     <text class="flex-cell flex-row">姓名</text>
     <text class="flex-cell flex-row">地点</text>
     <text class="flex-cell flex-row">携带人数</text>
