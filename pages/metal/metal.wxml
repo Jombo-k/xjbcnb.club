@@ -63,12 +63,31 @@
   <navigator 
     url="/pages/metal/info/info"
     hover-class="navigator-hover"
+    class="border-bottom"
   >
     <view class="item">
       <view class="item-image">
         <image src="../../images/xjbcnb_logo.png"></image>
       </view>
       <view class="item-text">
+        <text class="text-time text-title">EMPYRIUM 黑暗森林 北京专场</text>
+        <text class="text-time">2018-08-18 21:00</text>
+        <text class="text-time">地点: 悟博武道馆</text>
+        <text class="text-time">演出乐队: 瞎几把吹牛逼乐队</text>
+      </view>
+    </view>
+  </navigator>
+  <navigator 
+    url="/pages/metal/info/info"
+    hover-class="navigator-hover"
+    class="border-bottom"
+  >
+    <view class="item">
+      <view class="item-image">
+        <image src="../../images/xjbcnb_logo.png"></image>
+      </view>
+      <view class="item-text">
+        <text class="text-time text-title">EMPYRIUM 黑暗森林 北京专场</text>
         <text class="text-time">2018-08-18 21:00</text>
         <text class="text-time">地点: 悟博武道馆</text>
         <text class="text-time">演出乐队: 瞎几把吹牛逼乐队</text>

@@ -13,7 +13,7 @@
   "tabBar": {
     "color": "#8a8a8a",
     "selectedColor": "#1296db",
-    "backgroundColor": "#000",
+    "backgroundColor": "#2a2f33",
     "list": [{
       "pagePath": "pages/metal/metal",
       "text": "metal",

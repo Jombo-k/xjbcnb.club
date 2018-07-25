@@ -1,8 +1,8 @@
 /* pages/metal/metal.wxss */
 .list {
   text-align: left;
-  font-size: 60rpx;
-  color: #fff;
+  font-size: 20px;
+  color: #7d8085;
   margin-left: 30rpx;
 }
 .add {
@@ -27,18 +27,23 @@
 }
 .item {
   width: 100%;
-  height: 300rpx;
-  border: 1px solid #1296db;
-  border-radius: 10rpx;
-  margin-top: 20rpx;
+  height: 175px;
+  padding-top: 16px;
+  box-sizing: border-box;
   overflow: hidden;
-  background-color: rgba(191, 230, 248, 0.404);
+  /* background-color: rgba(191, 230, 248, 0.404); */
+}
+
+.border-bottom {
+  border-bottom: 1px solid #40434a;
+}
+.border-bottom:last-child {
+  border-bottom: none;
 }
 .item-image {
-  width: 290rpx;
-  height: 290rpx;
-  margin: 5rpx;
-  border-radius: 10rpx;
+  width: 105px;
+  height: 137px;
+  margin-right: 15px;
   background-color: blueviolet;
   overflow: hidden;
   float: left;
@@ -51,15 +56,19 @@
   width: 55%;
   height: 100%;
   float: left;
-  padding-top: 10rpx;
   box-sizing: border-box;
-  margin-top:7px;
-  color: #000;
+  color: #c1c2c7;
+  font-size: 10px;
 }
 .text-time {
   display: inline-block;
   /* color: #1; */
-  line-height: 50rpx;
+  line-height: 20px;
+}
+.text-title {
+  color: #fafeff;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 /* 弹出框 开始 */
 
@@ -223,10 +232,6 @@ radio{
 }
 /* 弹出框 结束 */
 
-page {
-  background-color: #fbf9fe;
-  height: 100%;
-}
 .page__hd{
     padding: 50rpx 50rpx 100rpx 50rpx;
     text-align: center;
