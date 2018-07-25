@@ -1,0 +1,9 @@
+<!--pages/metal/info/info.wxml-->
+<view id="info">
+  <view class="info-image">
+    <image src="../../../images/thouse.jpeg"></image>
+  </view>
+  <text class="info-people">参与人员: 吴亦凡 易烊千玺 华晨宇 王北车等18人...</text>
+  <button class="btn-tac" size="mini" type="warn">取消发布</button>
+  <button class="btn-tac" size="mini" type="primary">安排上</button>
+</view>

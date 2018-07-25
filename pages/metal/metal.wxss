@@ -1,8 +1,25 @@
 /* pages/metal/metal.wxss */
 .list {
-  text-align: center;
+  text-align: left;
   font-size: 60rpx;
   color: #fff;
+  margin-left: 30rpx;
+}
+.add {
+  width: 100rpx;
+  height: 100rpx;
+  border: 1px solid #1296db;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 100rpx;
+  color: #1296db;
+  background-color: #ccc;
+  position: fixed;
+  bottom: -10rpx;
+  left: 50%;
+  transform: translateX(-50rpx);
+  z-index: 9999999;
 }
 .list-container {
   padding: 0 30rpx;
@@ -15,6 +32,7 @@
   border-radius: 10rpx;
   margin-top: 20rpx;
   overflow: hidden;
+  background-color: rgba(191, 230, 248, 0.404);
 }
 .item-image {
   width: 290rpx;
@@ -35,10 +53,203 @@
   float: left;
   padding-top: 10rpx;
   box-sizing: border-box;
-  /* background-color: #ccc; */
+  margin-top:7px;
+  color: #000;
 }
 .text-time {
   display: inline-block;
   /* color: #1; */
   line-height: 50rpx;
 }
+/* 弹出框 开始 */
+
+#panel text{
+  height: 9vh;
+  line-height: 9vh;
+  border: 1rpx solid #ddd;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+.flex-cell{
+  flex: 1;
+}
+.blackBg {
+  color: #fff;
+}
+.add-btn {
+  margin: 30rpx;
+  width: 250rpx;
+  height: 100rpx;
+}
+.red {
+  color: #1296db;
+  text-decoration: underline;
+  /* background: red;
+  width: 60rpx;
+  height: 30rpx; */
+}
+
+.picker {
+  line-height: 30px;
+  display: inline-block;
+}
+/* 点击添加 */
+/*button*/  
+.btn {  
+  width: 80%;  
+  padding: 20rpx 0;  
+  border-radius: 10rpx;  
+  text-align: center;  
+  margin: 40rpx 10%;  
+  background: #000;  
+  color: #fff;  
+}  
+  
+/*mask*/  
+.drawer_screen {  
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 1000;  
+  background: #000;  
+  opacity: 0.5;  
+  overflow: hidden;  
+}  
+  
+/*content*/  
+.drawer_box {  
+  width: 650rpx;  
+  overflow: hidden;  
+  position: fixed;  
+  top: 50%;  
+  left: 0;  
+  z-index: 1001;  
+  background: #FAFAFA;  
+  margin: -150px 50rpx 0 50rpx;  
+  border-radius: 3px;  
+}  
+  
+.drawer_title{  
+  padding:15px;  
+  font-size: 20px;  
+  text-align: center;  
+}  
+.drawer_content {  
+  height: 210px;  
+  overflow-y: scroll;
+}  
+  
+.btn_ok{  
+  padding: 10px;  
+  font-size: 20px;  
+  text-align: center;  
+  border-top: 1px solid #E8E8EA;  
+  color: #1296db;  
+}  
+  
+.top{  
+  padding-top:8px;  
+}  
+.bottom {  
+    padding-bottom:8px;  
+}  
+.title {  
+  height: 30px;  
+  line-height: 30px;  
+  width: 160rpx;  
+  text-align: center;  
+  display: inline-block;  
+  font-size: 300 28rpx/30px;  
+}  
+.input_base {  
+  border: 2rpx solid #ccc;  
+  padding-left: 10rpx;  
+  margin-right: 50rpx;  
+}  
+.input_h30{  
+  height: 30px;  
+  line-height: 30px;  
+}  
+.input_h60{  
+  height: 60px;  
+}  
+.input_view{  
+  font-size: 12px;  
+  background: #fff;  
+  color:#000;  
+  line-height: 30px;  
+}  
+  
+input {  
+  font-size: 12px;  
+  background: #fff;  
+  color:#000 ;  
+}
+radio{
+  margin-right: 20px;  
+}
+.grid {
+  display: -webkit-box;
+  display: box;
+}  
+.col-0 {
+  -webkit-box-flex:0;
+  box-flex:0;
+}  
+.col-1 {
+  -webkit-box-flex:1;
+  box-flex:1;
+}  
+.fl {
+  float: left;
+}  
+.fr {
+  float: right;
+}
+.add-image {
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+}
+/* 弹出框 结束 */
+
+page {
+  background-color: #fbf9fe;
+  height: 100%;
+}
+.page__hd{
+    padding: 50rpx 50rpx 100rpx 50rpx;
+    text-align: center;
+}
+.page__title{
+    display: inline-block;
+    padding: 20rpx 40rpx;
+    font-size: 32rpx;
+    color: #AAAAAA;
+    border-bottom: 1px solid #CCCCCC;
+}
+.page__desc{
+    display: none;
+    margin-top: 20rpx;
+    font-size: 26rpx;
+    color: #BBBBBB;
+}
+.section{
+    margin-bottom: 80rpx;
+}
+.section__title{
+    margin-bottom: 16rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+}
+

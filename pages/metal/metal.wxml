@@ -1,15 +1,78 @@
 <!--pages/metal/metal.wxml-->
 <!-- <image class="image" src="../../images/logo.jpg"></image> -->
-<view class="list">演出马上就要开始了</view>
+<view class="list">演出</view>
+<view 
+  class="add"
+  bindtap="powerDrawer"
+  data-statu="open"
+>+</view>
+<!--mask-->  
+<view 
+  class="drawer_screen"
+  bindtap="powerDrawer"
+  data-statu="close"
+  wx:if="{{showModalStatus}}"
+></view>  
+<!-- 发布弹框 -->
+<!--使用animation属性指定需要执行的动画-->  
+<view
+  animation="{{animationData}}"
+  class="drawer_box"
+  wx:if="{{showModalStatus}}"
+>  
+  <!--drawer content-->  
+  <view class="drawer_title">发布演出</view>  
+  <view class="drawer_content">  
+    <view class="top grid">  
+      <label class="title col-0">时间</label>  
+      <view class="tui-picker-content">
+        <picker
+          mode="multiSelector"
+          value="{{dateTime1}}"
+          bindchange="changeDateTime1"
+          bindcolumnchange="changeDateTimeColumn1"
+          range="{{dateTimeArray1}}"
+        >
+          <view class="tui-picker-detail picker">
+            {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+          </view>
+        </picker>
+      </view>
+    </view>  
+    <view class="top grid">  
+      <label class="title col-0">地点</label>  
+      <input bindinput="setAddress" class="input_base input_h30 col-1" name="address"></input>  
+    </view>
+    <view class="top grid">  
+      <label class="title col-0">乐队</label>  
+      <input bindinput="setWithNum" class="input_base input_h30 col-1" name="withNum"></input>  
+    </view>
+    <view class="top grid">  
+      <label class="title col-0">上传图片</label>  
+      <button class="add-image" bindtap='addImage'>点击上传图片</button>  
+    </view>
+  </view>  
+  <view 
+    class="btn_ok"
+    bindtap="powerDrawer"
+    data-statu="close"
+  >确定</view>  
+</view>
+
 <view class="list-container">
-  <view class="item">
-    <view class="item-image">
-      <image src="../../images/zhangshihu.jpg"></image>
+  <navigator 
+    url="/pages/metal/info/info"
+    hover-class="navigator-hover"
+  >
+    <view class="item">
+      <view class="item-image">
+        <image src="../../images/xjbcnb_logo.png"></image>
+      </view>
+      <view class="item-text">
+        <text class="text-time">2018-08-18 21:00</text>
+        <text class="text-time">地点: 悟博武道馆</text>
+        <text class="text-time">演出乐队: 瞎几把吹牛逼乐队</text>
+      </view>
     </view>
-    <view class="item-text">
-      <text class="text-time">演出时间: 8-18 21:00</text>
-      <text class="text-time">演出地点: 武博武道馆</text>
-      <text class="text-time">演出乐队: 瞎几把吹牛逼乐队,瞎几把吹牛逼乐队</text>
-    </view>
-  </view>
+  </navigator>
 </view>

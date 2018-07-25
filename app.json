@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/metal/metal",
-    "pages/drink/drink"
+    "pages/drink/drink",
+    "pages/metal/info/info"
   ],
   "window":{
     "backgroundTextStyle":"light",
