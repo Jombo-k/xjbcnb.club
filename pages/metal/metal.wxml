@@ -99,7 +99,7 @@
       </view>
       <view class="item-text">
         <text class="text-time text-title">{{item.title}}</text>
-        <text class="text-time">{{stampToTime(item.time)}}</text>
+        <text class="text-time">{{item.time}}</text>
         <text class="text-time">地点: {{item.address}}</text>
         <text class="text-time">演出乐队: {{item.team}}</text>
         <view class="avatar-box">
