@@ -1,33 +1,28 @@
 // pages/metal/metal.js
-var dateTimePicker = require('../../lib/dateTimePicker.js');
-Page({
+let dateTimePicker = require('../../lib/dateTimePicker.js')
+let app = getApp
 
+Page({
   /**
    * 页面的初始数据
    */
   data: {
     showModalStatus: false,
     dateTimeArray1: null,
-    dateTime1: null
+    dateTime1: null, 
+    userInfo: {
+      avatarUrl: "",//用户头像
+      nickName: "",//用户昵称
+    }
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 获取完整的年月日 时分秒，以及默认显示的数组
-    var obj = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
-    var obj1 = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
-    // 精确到分的处理，将数组的秒去掉
-    var lastArray = obj1.dateTimeArray.pop();
-    var lastTime = obj1.dateTime.pop();
-
-    this.setData({
-      dateTime: obj.dateTime,
-      dateTimeArray: obj.dateTimeArray,
-      dateTimeArray1: obj1.dateTimeArray,
-      dateTime1: obj1.dateTime
-    });
+    this.getTime()
+    this.getAvatar()
   },
 
   /**
@@ -82,14 +77,14 @@ Page({
 
   //点击添加
   powerDrawer: function (e) {
-    var currentStatu = e.currentTarget.dataset.statu;
+    let currentStatu = e.currentTarget.dataset.statu;
     this.util(currentStatu)
   },
   util: function (currentStatu) {
     let _self = this
     /* 动画部分 */
     // 第1步：创建动画实例   
-    var animation = wx.createAnimation({
+    let animation = wx.createAnimation({
       duration: 200,  //动画时长  
       timingFunction: "linear", //线性  
       delay: 0  //0则不延迟  
@@ -146,7 +141,7 @@ Page({
       success: function (res) {
         console.log(res)
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-        // var tempFilePaths = res.tempFilePaths;
+        // let tempFilePaths = res.tempFilePaths;
         // wx.uploadFile({
         //   url: 'https://...',      //此处换上你的接口地址
         //   filePath: tempFilePaths[0],
@@ -160,7 +155,7 @@ Page({
         //     'user': 'test'  //其他额外的formdata，可不写
         //   },
         //   success: function (res) {
-        //     var data = res.data;
+        //     let data = res.data;
         //     console.log('data');
         //   },
         //   fail: function (res) {
@@ -175,12 +170,42 @@ Page({
     this.setData({ dateTime1: e.detail.value });
   },
   changeDateTimeColumn1(e) {
-    var arr = this.data.dateTime1, dateArr = this.data.dateTimeArray1;
+    let arr = this.data.dateTime1, dateArr = this.data.dateTimeArray1;
     arr[e.detail.column] = e.detail.value;
     dateArr[2] = dateTimePicker.getMonthDay(dateArr[0][arr[0]], dateArr[1][arr[1]]);
     this.setData({
       dateTimeArray1: dateArr,
       dateTime1: arr
+    })
+  },
+  //获取时间
+  getTime() {
+    // 获取完整的年月日 时分秒，以及默认显示的数组
+    let obj = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
+    let obj1 = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
+    // 精确到分的处理，将数组的秒去掉
+    let lastArray = obj1.dateTimeArray.pop();
+    let lastTime = obj1.dateTime.pop();
+
+    this.setData({
+      dateTime: obj.dateTime,
+      dateTimeArray: obj.dateTimeArray,
+      dateTimeArray1: obj1.dateTimeArray,
+      dateTime1: obj1.dateTime
+    })
+  }, 
+  //获取用户信息
+  getAvatar() {
+    wx.getUserInfo({
+      success: (res) => {
+        console.log(res);
+        let avatarUrl = 'userInfo.avatarUrl';
+        let nickName = 'userInfo.nickName';
+        this.setData({
+          [avatarUrl]: res.userInfo.avatarUrl,
+          [nickName]: res.userInfo.nickName,
+        })
+      }
     })
   }
 })

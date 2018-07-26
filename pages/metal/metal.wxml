@@ -91,6 +91,10 @@
         <text class="text-time">2018-08-18 21:00</text>
         <text class="text-time">地点: 悟博武道馆</text>
         <text class="text-time">演出乐队: 瞎几把吹牛逼乐队</text>
+        <view class="avatar-box">
+          <image class="user-avatar" src='{{userInfo.avatarUrl}}'></image>
+          <text class="text-avatar">1人参与</text>
+        </view>
       </view>
     </view>
   </navigator>
