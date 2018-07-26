@@ -13,8 +13,8 @@ Page({
     userInfo: {
       avatarUrl: "",//用户头像
       nickName: "",//用户昵称
-    }
-
+    },
+    listData: []
   },
 
   /**
@@ -23,6 +23,7 @@ Page({
   onLoad: function (options) {
     this.getTime()
     this.getAvatar()
+    this.getList()
   },
 
   /**
@@ -207,5 +208,30 @@ Page({
         })
       }
     })
+  },
+  //获取演出列表
+  getList () {
+    wx.request({
+      url: 'http://118.25.16.199:8688/get_show/',
+      method: 'GET',
+      success: (res) => {
+        console.log(res)
+        this.setData({
+          listData: res.data
+        })
+      }
+    })
+  },
+  //日期格式转时间
+
+  stampToTime: (date) => {
+    var date = new Date(date);
+    var Y = date.getFullYear() + '-';
+    var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+    var D = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate()) + ' ';
+    var h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':';
+    var m = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
+    //var s = (date.getSeconds() <10 ? '0' + date.getSeconds() : date.getSeconds());
+    return Y + M + D + h + m;
   }
 })

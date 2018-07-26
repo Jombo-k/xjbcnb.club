@@ -89,16 +89,19 @@
     url="/pages/metal/info/info"
     hover-class="navigator-hover"
     class="border-bottom"
+    wx:for="{{listData}}"
+    wx:for-item="item"
+    wx:key="this"
   >
     <view class="item">
       <view class="item-image">
-        <image src="../../images/xjbcnb_logo.png"></image>
+        <image src="{{item.imageurl}}"></image>
       </view>
       <view class="item-text">
-        <text class="text-time text-title">EMPYRIUM 黑暗森林 北京专场</text>
-        <text class="text-time">2018-08-18 21:00</text>
-        <text class="text-time">地点: 悟博武道馆</text>
-        <text class="text-time">演出乐队: 瞎几把吹牛逼乐队</text>
+        <text class="text-time text-title">{{item.title}}</text>
+        <text class="text-time">{{stampToTime(item.time)}}</text>
+        <text class="text-time">地点: {{item.address}}</text>
+        <text class="text-time">演出乐队: {{item.team}}</text>
         <view class="avatar-box">
           <image class="user-avatar" src='{{userInfo.avatarUrl}}'></image>
           <text class="text-avatar">1人参与</text>
