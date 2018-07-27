@@ -2,6 +2,8 @@
   "pages":[
     "pages/metal/metal",
     "pages/drink/drink",
+    "pages/publish/publish",
+    "pages/mine/mine",
     "pages/metal/info/info"
   ],
   "window":{
@@ -16,15 +18,27 @@
     "backgroundColor": "#2a2f33",
     "list": [{
       "pagePath": "pages/metal/metal",
-      "text": "metal",
+      "text": "演出",
       "iconPath": "images/metal.png",
       "selectedIconPath": "images/metal_active.png"
     },
     {
       "pagePath": "pages/drink/drink",
-      "text": "drink",
+      "text": "喝酒",
       "iconPath": "images/drink.png",
       "selectedIconPath": "images/drink_active.png"
+    },
+    {
+      "pagePath": "pages/publish/publish",
+      "text": "发布",
+      "iconPath": "images/publish.png",
+      "selectedIconPath": "images/publish_active.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "images/mine.png",
+      "selectedIconPath": "images/mine_active.png"
     }]
   }
 }
