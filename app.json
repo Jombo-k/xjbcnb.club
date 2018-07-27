@@ -19,8 +19,8 @@
     "list": [{
       "pagePath": "pages/metal/metal",
       "text": "演出",
-      "iconPath": "images/metal.png",
-      "selectedIconPath": "images/metal_active.png"
+      "iconPath": "images/music.png",
+      "selectedIconPath": "images/music_active.png"
     },
     {
       "pagePath": "pages/drink/drink",
