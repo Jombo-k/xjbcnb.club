@@ -1,10 +1,10 @@
 {
   "pages":[
+    "pages/metal/info/info",
     "pages/metal/metal",
     "pages/drink/drink",
     "pages/publish/publish",
-    "pages/mine/mine",
-    "pages/metal/info/info"
+    "pages/mine/mine"
   ],
   "window":{
     "backgroundTextStyle":"light",

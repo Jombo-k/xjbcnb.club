@@ -1,9 +1,50 @@
 <!--pages/metal/info/info.wxml-->
 <view id="info">
-  <view class="info-image">
-    <image src="../../../images/thouse.jpeg"></image>
+  <view class="show-info">
+    <view class="title">
+      show
+    </view>
+    <view class="show-image">
+      <image src="../../../images/thouse.jpeg"></image>
+    </view>
+    <view class="tac show-title">魔都金属之夜 Urban Hell厂牌首</view>
+    <view class="tac show-little">07.28 本周六 17:00</view>
+    <view class="tac show-little">MAO LIVEHOUSE</view>
   </view>
-  <text class="info-people">参与人员: 吴亦凡 易烊千玺 华晨宇 王北车等18人...</text>
-  <button class="btn-tac" size="mini" type="warn">取消发布</button>
-  <button class="btn-tac" size="mini" type="primary">安排上</button>
+  <view class="people-info">
+    <view class="people-title">
+      <text>参与人</text>
+      <view>共32人参与</view>
+    </view>
+    <view class="peoele-avatar clearfix">
+      <view class="avatar "></view>
+      <view class="avatar "></view>
+      <view class="avatar "></view>
+      <view class="avatar "></view>
+      <view class="avatar "></view>
+      <view class="avatar "></view>
+      <view class="avatar "></view>
+      <view class="avatar "></view>
+      <view class="avatar "></view>
+      <view class="avatar "></view>
+      <view class="avatar "></view>
+      <view class="avatar "></view>
+    </view>
+    <view class="more">MORE></view>
+  </view>
+  <view class="message-info">
+    <view class="message-title">留言</view>
+    <view class="message-item">
+      <view class="message-avatar">
+        <view class="avatar"></view>
+      </view>
+      <view class="message-text">
+        <view class="text-info">你们都到哪里了！！！</view>
+        <view class="text-user">小肚</view>
+      </view>
+      <view class="message-time">1分钟前</view>
+    </view>
+  </view>
+  <button class="btn-tac" size="mini" type="warn">我要留言</button>
+  <button class="btn-tac" size="mini" type="primary">我要参与</button>
 </view>
