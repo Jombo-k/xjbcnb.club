@@ -1,11 +1,11 @@
 <!--pages/metal/metal.wxml-->
 <!-- <image class="image" src="../../images/logo.jpg"></image> -->
 <view class="list">演出</view>
-<view 
+<!-- <view 
   class="add"
   bindtap="powerDrawer"
   data-statu="open"
->+</view>
+>+</view> -->
 <!--mask-->  
 <view 
   class="drawer_screen"
