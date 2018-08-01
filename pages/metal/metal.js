@@ -215,9 +215,20 @@ Page({
       url: 'http://118.25.16.199:8688/get_show/',
       method: 'GET',
       success: (res) => {
-        console.log(res)
+        console.log(res.data)
+        let partake = ''
+        let list = []
+        let number = 0
+        res.data.map((item, index)=>{
+          let data = {}
+          let number = item.partake.length
+          partake = item.partake.join(',')
+          Object.assign(data, item, { number: number},{ partake: partake })
+          list.push(data)
+        })
+        console.log(list)
         this.setData({
-          listData: res.data
+          listData: list
         })
       }
     })

@@ -101,10 +101,10 @@
         <text class="text-time text-title">{{item.title}}</text>
         <text class="text-time">{{item.time}}</text>
         <text class="text-time">地点: {{item.address}}</text>
-        <text class="text-time">演出乐队: {{item.team}}</text>
+        <text class="text-time">演出乐队: {{item.partake}}</text>
         <view class="avatar-box">
           <image class="user-avatar" src='{{userInfo.avatarUrl}}'></image>
-          <text class="text-avatar">1人参与</text>
+          <text class="text-avatar">{{item.number}}人参与</text>
         </view>
       </view>
     </view>
