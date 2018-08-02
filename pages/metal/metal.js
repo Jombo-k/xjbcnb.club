@@ -150,7 +150,7 @@ Page({
         //   header: {
         //     "Content-Type": "multipart/form-data",
         //     'accept': 'application/json',
-        //     'Authorization': 'Bearer ..'    //若有token，此处换上你的token，没有的话省略
+        //     'Authorization': 'Bearer ..'   // //若有token，此处换上你的token，没有的话省略
         //   },
         //   formData: {
         //     'user': 'test'  //其他额外的formdata，可不写
